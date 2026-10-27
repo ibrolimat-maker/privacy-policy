@@ -200,11 +200,18 @@
         html[lang="en"] .terms-container { text-align: left; }
         
         @media (max-width: 768px) {
-            .terms-container { padding: 25px; width: 95%; }
-            .terms-title { font-size: 1.6em; }
-            .terms-header { flex-direction: column; align-items: flex-start; }
-            html[lang="en"] .terms-header { align-items: flex-start; }
-            html[lang="ar"] .terms-header { align-items: flex-start; }
+            body { padding-top: 60px; }
+            .terms-container { padding: 15px; width: 92%; margin: 20px auto; border-radius: 15px; }
+            .terms-title { font-size: 1.4em; text-align: center; }
+            .terms-header { flex-direction: column; align-items: center; text-align: center; padding-bottom: 15px; margin-bottom: 20px; }
+            html[lang="en"] .terms-header { align-items: center; }
+            html[lang="ar"] .terms-header { align-items: center; }
+            .section-block { padding: 15px; margin-bottom: 20px; border-radius: 10px; }
+            .terms-content h2 { font-size: 1.2em; }
+            .terms-content p, .terms-content ul li { font-size: 1em; }
+            .glass-nav { padding: 0 15px; height: 60px; }
+            .nav-brand .brand-link { font-size: 1.1em; }
+            .lang-btn { padding: 4px 10px; font-size: 0.85em; }
         }
     </style>
 </head>
