@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>سياسة الخصوصية - Clash of the Box | Privacy Policy</title>
+    <link rel="stylesheet" href="styles.css" onerror="this.remove()"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-gold: #ffc107;
+            --bg-dark: #1e272e;
+            --text-light: #e0e0e0;
+            --glass-bg: rgba(30, 39, 46, 0.95);
+        }
+
+        body {
+            margin: 0;
+            padding-top: 80px;
+            background-color: #090A14;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--text-light);
+            background-image: url('https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(9, 10, 20, 0.85);
+            z-index: -1;
+        }
+
+        /* Navbar Styling */
+        .glass-nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 70px;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 193, 7, 0.3);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 5%;
+            box-sizing: border-box;
+            z-index: 1000;
+        }
+
+        .nav-brand .brand-link {
+            text-decoration: none;
+            color: var(--primary-gold);
+            font-size: 1.5em;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .lang-btn {
+            background: transparent;
+            border: 1px solid var(--primary-gold);
+            color: var(--primary-gold);
+            padding: 5px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .lang-btn:hover {
+            background: var(--primary-gold);
+            color: #000;
+        }
+
+        .nav-controls {
+            display: flex;
+            gap: 10px;
+        }
+
+        /* Content Container */
+        .policy-container {
+            width: 90%;
+            max-width: 1000px;
+            margin: 40px auto;
+            background: var(--glass-bg);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 193, 7, 0.2);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+            padding: 50px;
+            text-align: right;
+            backdrop-filter: blur(10px);
+        }
+
+        .policy-header {
+            border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .policy-title {
+            color: var(--primary-gold);
+            font-size: 2.2em;
+            margin: 0;
+            font-weight: 800;
+        }
+
+        .policy-content h2 {
+            color: var(--primary-gold);
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-size: 1.4em;
+            background: rgba(255, 193, 7, 0.05);
+            padding: 10px 15px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+        }
+
+        [dir="rtl"] .policy-content h2 {
+            border-right: 4px solid var(--primary-gold);
+        }
+        [dir="ltr"] .policy-content h2 {
+            border-left: 4px solid var(--primary-gold);
+        }
+
+        .policy-content p, .policy-content ul {
+            font-size: 1.1em;
+            line-height: 1.8;
+            margin-bottom: 15px;
+            color: #d1d1d1;
+        }
+
+        .policy-content ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        [dir="rtl"] .policy-content li {
+            padding-right: 25px;
+            position: relative;
+        }
+        [dir="rtl"] .policy-content li:before {
+            content: "•";
+            color: var(--primary-gold);
+            position: absolute;
+            right: 0;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        [dir="rtl"] .policy-content ul { padding-right: 15px; }
+
+        [dir="ltr"] .policy-content li {
+            padding-left: 25px;
+            position: relative;
+        }
+        [dir="ltr"] .policy-content li:before {
+            content: "•";
+            color: var(--primary-gold);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        [dir="ltr"] .policy-content ul { padding-left: 15px; }
+
+
+        .highlight-box {
+            background: rgba(255, 193, 7, 0.1);
+            border: 1px dashed rgba(255, 193, 7, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 30px 0;
+            color: #fff;
+        }
+
+        .site-footer {
+            text-align: center;
+            padding: 30px;
+            color: #aaa;
+            background: rgba(0,0,0,0.9);
+            margin-top: 50px;
+        }
+
+        .site-footer a {
+            color: var(--primary-gold);
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+
+        .site-footer a:hover {
+            color: #fff;
+            text-decoration: underline;
+        }
+
+        .lang-en { display: none; }
+        .lang-ar { display: block; }
+        
+        html[lang="en"] .lang-en { display: block; }
+        html[lang="en"] .lang-ar { display: none; }
+        html[lang="en"] .policy-container { text-align: left; }
+        html[lang="en"] .policy-header { flex-direction: row-reverse; justify-content: space-between; }
+
+        @media (max-width: 768px) {
+            .policy-container { padding: 25px; width: 95%; }
+            .policy-title { font-size: 1.8em; }
+            .policy-header { flex-direction: column; text-align: center; }
+            html[lang="en"] .policy-header { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="glass-nav">
+        <div class="nav-brand">
+            <a href="index.html" class="brand-link">
+                <i class="fas fa-box-open"></i> 
+                <span class="lang-ar">Clash of the Box</span>
+                <span class="lang-en">Clash of the Box</span>
+            </a>
+        </div>
+        <div class="nav-controls">
+            <button onclick="toggleLang()" class="lang-btn">
+                <i class="fas fa-globe"></i> 
+                <span class="lang-ar">English</span>
+                <span class="lang-en">عربي</span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="policy-container">
+        <div class="policy-header">
+            <div>
+                <h1 class="policy-title">
+                    <span class="lang-ar">سياسة الخصوصية</span>
+                    <span class="lang-en">Privacy Policy</span>
+                </h1>
+                <p style="color: #aaa; margin-top: 5px;">
+                    <span class="lang-ar">كيف نحمي بياناتك أثناء استمتاعك باللعب</span>
+                    <span class="lang-en">How we protect your data while you enjoy playing</span>
+                </p>
+            </div>
+            <i class="fas fa-gamepad fa-4x" style="color: rgba(255, 193, 7, 0.2);"></i>
+        </div>
+
+        <div class="policy-content">
+            <p>
+                <span class="lang-ar">مرحباً بكم في لعبة "Clash of the Box" (صراع الصناديق). نحن نقدر خصوصيتك ونهدف إلى توفير تجربة لعب آمنة وممتعة. توضح هذه الوثيقة المبسطة كيفية تعاملنا مع البيانات الأساسية لتشغيل اللعبة.</span>
+                <span class="lang-en">Welcome to "Clash of the Box". We value your privacy and aim to provide a safe and fun gaming experience. This simplified document explains how we handle basic data to run the game.</span>
+            </p>
+
+            <!-- 1. Information Collected -->
+            <div class="lang-ar">
+                <h2>1. المعلومات التي نجمعها</h2>
+                <p>لكي تعمل اللعبة بشكل صحيح ونحفظ تقدمك، نقوم بجمع بيانات بسيطة جداً:</p>
+                <ul>
+                    <li><strong>بيانات الحساب:</strong> اسم المستخدم (الذي تختاره) والبريد الإلكتروني (لتسجيل الدخول وحفظ تقدمك).</li>
+                    <li><strong>بيانات اللعب:</strong> المستوى الذي وصلت إليه، عدد النقاط (Coins) والنجوم (Stars)، وإنجازاتك داخل اللعبة.</li>
+                    <li><strong>البيانات التقنية:</strong> قد نجمع معلومات تلقائية مثل نوع الجهاز، ونظام التشغيل، ورمز الجهاز (Device Token) لإرسال الإشعارات وتحديد أسباب الأعطال (Crash Logs) إن وجدت.</li>
+                </ul>
+            </div>
+            <div class="lang-en">
+                <h2>1. Information We Collect</h2>
+                <p>For the game to work properly and save your progress, we collect very basic data:</p>
+                <ul>
+                    <li><strong>Account Data:</strong> Username (chosen by you) and Email (for login and saving progress).</li>
+                    <li><strong>Gameplay Data:</strong> Your level, Coins, Stars, and in-game achievements.</li>
+                    <li><strong>Technical Data:</strong> We may automatically collect info like device type, OS, and Device Token (for push notifications) and Crash Logs if errors occur.</li>
+                </ul>
+            </div>
+
+            <!-- 2. Usage -->
+            <div class="lang-ar">
+                <h2>2. كيف نستخدم معلوماتك</h2>
+                <p>نحن نستخدم البيانات لغرض واحد وهو تحسين تجربة اللعب الخاصة بك:</p>
+                <ul>
+                    <li>حفظ تقدمك في اللعبة لتتمكن من استكماله عبر أجهزة مختلفة.</li>
+                    <li>عرض اسمك في لوحة المتصدرين (Leaderboards) لمقارنة نتائجك مع اللاعبين الآخرين.</li>
+                    <li>إرسال إشعارات وتنبيهات بخصوص المهام اليومية (Daily Quests) والهدايا.</li>
+                </ul>
+            </div>
+            <div class="lang-en">
+                <h2>2. How We Use Your Information</h2>
+                <p>We use the data for one purpose: to enhance your gaming experience:</p>
+                <ul>
+                    <li>Saving your game progress so you can resume on different devices.</li>
+                    <li>Displaying your name on the Leaderboards to compete with other players.</li>
+                    <li>Sending push notifications regarding Daily Quests and rewards.</li>
+                </ul>
+            </div>
+
+            <!-- 3. Sharing & Ads -->
+            <div class="lang-ar">
+                <h2>3. مشاركة البيانات والإعلانات</h2>
+                <p>نحن لا نبيع بياناتك الشخصية أبداً. اللعبة مجانية، ولذلك قد نستخدم خدمات أطراف ثالثة موثوقة:</p>
+                <ul>
+                    <li><strong>خدمات السحابة (Firebase):</strong> لحفظ حسابك وتقدمك في اللعبة بشكل آمن.</li>
+                    <li><strong>شبكات الإعلانات (Google AdMob):</strong> قد يتم عرض إعلانات داخل اللعبة. تستخدم هذه الشبكات بيانات غير شخصية (مثل معرّف الإعلانات الخاص بجهازك) لتقديم إعلانات تناسبك.</li>
+                </ul>
+                <div class="highlight-box">
+                    <i class="fas fa-shield-alt"></i> <strong>مجانية وآمنة:</strong>
+                    هذه اللعبة لا تحتوي على أي عمليات شراء بأموال حقيقية ولا تطلب أو تخزن أي بيانات بنكية أو بطاقات ائتمانية.
+                </div>
+            </div>
+            <div class="lang-en">
+                <h2>3. Data Sharing & Advertisements</h2>
+                <p>We never sell your personal data. The game is free, so we use trusted third-party services:</p>
+                <ul>
+                    <li><strong>Cloud Services (Firebase):</strong> To securely save your account and game progress.</li>
+                    <li><strong>Ad Networks (Google AdMob):</strong> Ads may be shown in the game. These networks use non-personal data (like device Ad ID) to serve relevant ads.</li>
+                </ul>
+                <div class="highlight-box">
+                    <i class="fas fa-shield-alt"></i> <strong>Free & Secure:</strong>
+                    This game does NOT contain real-money purchases and does not ask for or store any banking or credit card details.
+                </div>
+            </div>
+
+            <!-- 4. Permissions -->
+            <div class="lang-ar">
+                <h2>4. صلاحيات التطبيق (Permissions)</h2>
+                <p>تطلب اللعبة صلاحيات محدودة جداً:</p>
+                <ul>
+                    <li><strong>الإشعارات (Notifications):</strong> لتذكيرك بفتح الصناديق والمكافآت اليومية.</li>
+                    <li><strong>الإنترنت:</strong> للاتصال بالسيرفر وحفظ تقدمك وعرض لوحة المتصدرين.</li>
+                    <li>نحن <strong>لا</strong> نطلب الوصول إلى موقعك الجغرافي الدقيق (GPS) أو جهات الاتصال الخاصة بك.</li>
+                </ul>
+            </div>
+            <div class="lang-en">
+                <h2>4. App Permissions</h2>
+                <p>The game requests very limited permissions:</p>
+                <ul>
+                    <li><strong>Notifications:</strong> To remind you to open boxes and claim daily rewards.</li>
+                    <li><strong>Internet:</strong> To connect to the server, save progress, and show leaderboards.</li>
+                    <li>We do <strong>NOT</strong> request access to your precise location (GPS) or your contacts.</li>
+                </ul>
+            </div>
+
+            <!-- 5. Rights & Deletion -->
+            <div class="lang-ar">
+                <h2>5. حقوقك وحذف الحساب</h2>
+                <p>لديك السيطرة الكاملة على حسابك في اللعبة:</p>
+                <ul>
+                    <li><strong>حذف الحساب:</strong> يمكنك طلب حذف حسابك وجميع بيانات تقدمك في اللعبة نهائياً في أي وقت من خلال إعدادات اللعبة أو عبر مراسلتنا.</li>
+                </ul>
+            </div>
+            <div class="lang-en">
+                <h2>5. Your Rights & Account Deletion</h2>
+                <p>You have full control over your game account:</p>
+                <ul>
+                    <li><strong>Account Deletion:</strong> You can request the permanent deletion of your account and all game progress at any time via in-game settings or by contacting us.</li>
+                </ul>
+            </div>
+
+            <!-- 6. Contact -->
+            <div class="lang-ar">
+                <h2>6. اتصل بنا</h2>
+                <p>إذا كان لديك أي استفسار حول الخصوصية، فريق الدعم هنا للمساعدة:</p>
+                <p>
+                    <i class="fas fa-envelope"></i> البريد الإلكتروني: support@clashofthebox.com
+                </p>
+            </div>
+            <div class="lang-en">
+                <h2>6. Contact Us</h2>
+                <p>If you have any questions about privacy, our support team is here to help:</p>
+                <p>
+                    <i class="fas fa-envelope"></i> Email: support@clashofthebox.com
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <p>
+            <span class="lang-ar">&copy; 2026 جميع الحقوق محفوظة للعبة Clash of the Box</span>
+            <span class="lang-en">&copy; 2026 All Rights Reserved to Clash of the Box</span>
+        </p>
+        <p style="margin-top: 10px;">
+            <a href="privacy.html">
+                <span class="lang-ar">سياسة الخصوصية</span>
+                <span class="lang-en">Privacy Policy</span>
+            </a> 
+            <span class="separator">|</span> 
+            <a href="terms.html">
+                <span class="lang-ar">شروط الخدمة</span>
+                <span class="lang-en">Terms of Service</span>
+            </a>
+        </p>
+    </footer>
+
+    <script>
+        function toggleLang() {
+            const html = document.documentElement;
+            const currentLang = html.getAttribute('lang');
+            
+            if (currentLang === 'ar') {
+                html.setAttribute('lang', 'en');
+                html.setAttribute('dir', 'ltr');
+            } else {
+                html.setAttribute('lang', 'ar');
+                html.setAttribute('dir', 'rtl');
+            }
+        }
+    </script>
+</body>
+</html>
