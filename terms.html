@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>شروط الخدمة - Clash of the Box | Terms of Service</title>
+    <link rel="stylesheet" href="styles.css" onerror="this.remove()"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-gold: #ffc107;
+            --bg-dark: #1e272e;
+            --text-light: #e0e0e0;
+            --glass-bg: rgba(30, 39, 46, 0.95);
+        }
+
+        body {
+            margin: 0;
+            padding-top: 80px;
+            background-color: #090A14;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--text-light);
+            background-image: url('https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(9, 10, 20, 0.85);
+            z-index: -1;
+        }
+
+        .glass-nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 70px;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 193, 7, 0.3);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 5%;
+            box-sizing: border-box;
+            z-index: 1000;
+        }
+
+        .nav-brand .brand-link {
+            text-decoration: none;
+            color: var(--primary-gold);
+            font-size: 1.5em;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .lang-btn {
+            background: transparent;
+            border: 1px solid var(--primary-gold);
+            color: var(--primary-gold);
+            padding: 5px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .lang-btn:hover {
+            background: var(--primary-gold);
+            color: #000;
+        }
+
+        .terms-container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 40px auto;
+            background: var(--glass-bg);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 193, 7, 0.2);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
+            padding: 50px;
+            backdrop-filter: blur(15px);
+            text-align: right;
+        }
+
+        .terms-header {
+            border-bottom: 2px solid rgba(255, 193, 7, 0.3);
+            padding-bottom: 25px;
+            margin-bottom: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .terms-title {
+            color: var(--primary-gold);
+            font-size: 2.2em;
+            margin: 0;
+            font-weight: 800;
+        }
+
+        .section-block {
+            margin-bottom: 40px;
+            padding: 25px;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 12px;
+            border-inline-start: 3px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        .section-block:hover {
+            background: rgba(255, 255, 255, 0.05);
+            border-inline-start-color: var(--primary-gold);
+            transform: translateY(-2px);
+        }
+
+        .terms-content h2 {
+            color: var(--primary-gold);
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .terms-content p, .terms-content ul li {
+            font-size: 1.1em;
+            line-height: 1.8;
+            color: #d1d1d1;
+        }
+
+        .terms-content ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        [dir="rtl"] .terms-content ul li {
+            padding-right: 25px;
+            position: relative;
+        }
+        [dir="rtl"] .terms-content ul li:before {
+            content: "•";
+            color: var(--primary-gold);
+            position: absolute;
+            right: 0;
+            font-weight: bold;
+        }
+
+        [dir="ltr"] .terms-content ul li {
+            padding-left: 25px;
+            position: relative;
+        }
+        [dir="ltr"] .terms-content ul li:before {
+            content: "•";
+            color: var(--primary-gold);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        .respect-box {
+            background: linear-gradient(45deg, rgba(255, 193, 7, 0.05), rgba(255, 152, 0, 0.05));
+            border: 1px solid rgba(255, 193, 7, 0.3);
+        }
+
+        .site-footer {
+            text-align: center;
+            padding: 30px;
+            color: #aaa;
+            background: rgba(0,0,0,0.9);
+            margin-top: 50px;
+        }
+
+        .site-footer a {
+            color: var(--primary-gold);
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        
+        .lang-en { display: none; }
+        .lang-ar { display: block; }
+        
+        html[lang="en"] .lang-en { display: block; }
+        html[lang="en"] .lang-ar { display: none; }
+        html[lang="en"] .terms-container { text-align: left; }
+        
+        @media (max-width: 768px) {
+            .terms-container { padding: 25px; width: 95%; }
+            .terms-title { font-size: 1.6em; }
+            .terms-header { flex-direction: column; align-items: flex-start; }
+            html[lang="en"] .terms-header { align-items: flex-start; }
+            html[lang="ar"] .terms-header { align-items: flex-start; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="glass-nav">
+        <div class="nav-brand">
+            <a href="index.html" class="brand-link">
+                <i class="fas fa-box-open"></i> 
+                <span class="lang-ar">Clash of the Box</span>
+                <span class="lang-en">Clash of the Box</span>
+            </a>
+        </div>
+        <div class="nav-controls" style="display: flex; gap: 10px;">
+            <button onclick="toggleLang()" class="lang-btn">
+                <i class="fas fa-globe"></i> 
+                <span class="lang-ar">English</span>
+                <span class="lang-en">عربي</span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="terms-container">
+        <div class="terms-header">
+            <div>
+                <h1 class="terms-title">
+                    <span class="lang-ar">شروط وقواعد اللعب</span>
+                    <span class="lang-en">Terms & Rules of Play</span>
+                </h1>
+                <p style="color: #aaa; margin-top: 5px;">
+                    <span class="lang-ar">القواعد الأساسية للاستمتاع بصراع الصناديق</span>
+                    <span class="lang-en">Basic rules to enjoy Clash of the Box</span>
+                </p>
+            </div>
+            <i class="fas fa-gavel fa-3x" style="color: rgba(255, 193, 7, 0.2);"></i>
+        </div>
+
+        <div class="terms-content">
+            <p>
+                <span class="lang-ar"><strong>مقدمة:</strong> "Clash of the Box" هي لعبة ترفيهية مجانية. باستخدامك للعبة، فإنك توافق على هذه الشروط البسيطة المصممة لضمان بيئة لعب عادلة وممتعة للجميع.</span>
+                <span class="lang-en"><strong>Introduction:</strong> "Clash of the Box" is a free-to-play entertainment game. By using the game, you agree to these simple terms designed to ensure a fair and fun gaming environment for everyone.</span>
+            </p>
+
+            <!-- 1. Free to play & Virtual Currency -->
+            <div class="section-block respect-box">
+                <h2><i class="fas fa-coins"></i> 
+                    <span class="lang-ar">1. لعبة مجانية وعملات افتراضية (هام جداً)</span>
+                    <span class="lang-en">1. Free Game & Virtual Currency (CRITICAL)</span>
+                </h2>
+                <div class="lang-ar">
+                    <p>نود التوضيح بشكل قاطع أن اللعبة <strong>مجانية تماماً 100%</strong> وتخلو من أي تحويلات مالية حقيقية:</p>
+                    <ul>
+                        <li><strong>العملات الافتراضية:</strong> جميع النقاط (Coins)، والنجوم (Stars)، والشرارة (Spark)، والمكافآت داخل اللعبة هي <strong>أرصدة افتراضية للترفيه فقط</strong> وليس لها أي قيمة مالية في العالم الحقيقي.</li>
+                        <li><strong>لا يوجد شراء أو سحب أموال:</strong> لا توفر اللعبة أي إمكانية لشراء هذه العملات بأموال حقيقية، ولا يمكن استبدالها أو سحبها كأموال نقدية تحت أي ظرف.</li>
+                        <li><strong>لا يوجد قمار:</strong> تعتمد اللعبة على المهارة والترفيه البحت، ولا تتضمن أي شكل من أشكال المراهنات أو القمار بأموال حقيقية.</li>
+                    </ul>
+                </div>
+                <div class="lang-en">
+                    <p>We want to clarify unequivocally that the game is <strong>100% strictly FREE</strong> and contains no real financial transactions:</p>
+                    <ul>
+                        <li><strong>Virtual Currency:</strong> All Coins, Stars, Spark, and in-game rewards are <strong>virtual balances for entertainment only</strong> and have NO real-world monetary value.</li>
+                        <li><strong>No Purchasing or Withdrawal:</strong> The game does not offer any ability to buy these currencies with real money, nor can they be exchanged or withdrawn as cash under any circumstances.</li>
+                        <li><strong>No Gambling:</strong> The game is based purely on skill and entertainment, and does not involve any form of real-money gambling or betting.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 2. Fair Play -->
+            <div class="section-block">
+                <h2><i class="fas fa-shield-alt"></i> 
+                    <span class="lang-ar">2. اللعب العادل والنزاهة</span>
+                    <span class="lang-en">2. Fair Play & Integrity</span>
+                </h2>
+                <div class="lang-ar">
+                    <p>نسعى لتوفير بيئة تنافسية عادلة. لذلك يُمنع منعاً باتاً:</p>
+                    <ul>
+                        <li>استخدام أي برامج خارجية، أدوات غش (Cheats)، أو تعديلات (Mods) للتلاعب بنتائج اللعبة أو زيادة النقاط بطرق غير شرعية.</li>
+                        <li>استغلال أي ثغرات برمجية (Bugs) في اللعبة لتعزيز مستوى الحساب.</li>
+                        <li>في حال اكتشاف أي تلاعب، سيتم حظر الحساب وإزالة جميع النقاط فوراً.</li>
+                    </ul>
+                </div>
+                <div class="lang-en">
+                    <p>We strive to provide a fair competitive environment. Therefore, it is strictly forbidden to:</p>
+                    <ul>
+                        <li>Use any third-party software, cheats, or mods to manipulate game results or illegally inflate points.</li>
+                        <li>Exploit any software bugs or glitches to boost account levels.</li>
+                        <li>If any manipulation is detected, the account will be banned and all points removed immediately.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 3. Account Name & Behavior -->
+            <div class="section-block">
+                <h2><i class="fas fa-user-tag"></i> 
+                    <span class="lang-ar">3. أسماء الحسابات والسلوك</span>
+                    <span class="lang-en">3. Account Names & Behavior</span>
+                </h2>
+                <div class="lang-ar">
+                    <ul>
+                        <li>يجب أن تكون أسماء المستخدمين (Usernames) لائقة ولا تحتوي على أي شتائم، ألفاظ نابية، أو إهانات لأي شخص أو جهة أو معتقد.</li>
+                        <li>تحتفظ إدارة اللعبة بالحق في تغيير أي اسم مسيء أو حظر الحساب المخالف.</li>
+                    </ul>
+                </div>
+                <div class="lang-en">
+                    <ul>
+                        <li>Usernames must be appropriate and must not contain profanity, insults, or offense to any person, entity, or belief.</li>
+                        <li>Game administration reserves the right to change any offensive name or ban the offending account.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 4. Account Termination -->
+            <div class="section-block">
+                <h2><i class="fas fa-door-closed"></i> 
+                    <span class="lang-ar">4. إنهاء الخدمة وحذف البيانات</span>
+                    <span class="lang-en">4. Termination & Data Deletion</span>
+                </h2>
+                <div class="lang-ar">
+                    <ul>
+                        <li>يحق لك كلاعب التوقف عن اللعب في أي وقت وطلب حذف حسابك وبياناتك من خلال إعدادات اللعبة.</li>
+                        <li>تحتفظ إدارة "Clash of the Box" بالحق الكامل في تجميد أو حذف أي حساب يثبت مخالفته لشروط اللعب العادل دون إشعار مسبق.</li>
+                    </ul>
+                </div>
+                <div class="lang-en">
+                    <ul>
+                        <li>As a player, you have the right to stop playing at any time and request the deletion of your account and data via game settings.</li>
+                        <li>"Clash of the Box" administration reserves the full right to freeze or delete any account proven to violate fair play conditions without prior notice.</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <p style="text-align: center; margin-top: 40px; color: var(--primary-gold);">
+                <span class="lang-ar">
+                    تسجيلك ولعبك في "Clash of the Box" هو موافقة ضمنية على هذه الشروط البسيطة. <br>
+                    نتمنى لك وقتاً ممتعاً في التحدي!
+                </span>
+                <span class="lang-en">
+                    Registering and playing "Clash of the Box" is an implicit agreement to these simple terms. <br>
+                    We wish you a great time challenging the boxes!
+                </span>
+            </p>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <p>
+            <span class="lang-ar">&copy; 2026 جميع الحقوق محفوظة للعبة Clash of the Box</span>
+            <span class="lang-en">&copy; 2026 All Rights Reserved to Clash of the Box</span>
+        </p>
+        <p style="margin-top: 10px;">
+            <a href="privacy.html">
+                <span class="lang-ar">سياسة الخصوصية</span>
+                <span class="lang-en">Privacy Policy</span>
+            </a> 
+            <span class="separator">|</span> 
+            <a href="terms.html">
+                <span class="lang-ar">شروط الخدمة</span>
+                <span class="lang-en">Terms of Service</span>
+            </a>
+        </p>
+    </footer>
+
+    <script>
+        function toggleLang() {
+            const html = document.documentElement;
+            const currentLang = html.getAttribute('lang');
+            
+            if (currentLang === 'ar') {
+                html.setAttribute('lang', 'en');
+                html.setAttribute('dir', 'ltr');
+            } else {
+                html.setAttribute('lang', 'ar');
+                html.setAttribute('dir', 'rtl');
+            }
+        }
+    </script>
+</body>
+</html>
