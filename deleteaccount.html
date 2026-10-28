@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سياسة حذف الحساب | Account Deletion Policy</title>
+    <!-- استخدام خطوط جوجل (Tajawal) لتصميم عصري ومقروء -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #F8FAFC;
+            --surface-color: #FFFFFF;
+            --text-main: #1A1C2E;
+            --text-muted: #64748B;
+            --primary: #F0B90B;
+            --danger: #FF4757;
+            --border-color: #E2E8F0;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-color: #0F101E;
+                --surface-color: #1A1C2E;
+                --text-main: #FFFFFF;
+                --text-muted: #94A3B8;
+                --primary: #F0B90B;
+                --border-color: #2D3748;
+            }
+        }
+
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            background-color: var(--surface-color);
+            border-radius: 24px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            border: 1px solid var(--border-color);
+        }
+
+        h1 {
+            text-align: center;
+            font-weight: 900;
+            margin-bottom: 10px;
+            color: var(--primary);
+        }
+
+        .subtitle {
+            text-align: center;
+            color: var(--text-muted);
+            margin-bottom: 40px;
+            font-size: 1.1rem;
+        }
+
+        .section {
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .method-card {
+            background-color: var(--bg-color);
+            border-radius: 16px;
+            padding: 24px;
+            margin-top: 20px;
+            border: 1px solid var(--border-color);
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            margin-top: 0;
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .badge {
+            background-color: var(--primary);
+            color: #0F101E;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 700;
+        }
+
+        .steps-list {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+
+        .steps-list li {
+            position: relative;
+            padding-right: 35px;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+        
+        /* التنسيق للغة الإنجليزية (LTR) */
+        [dir="ltr"] .steps-list li {
+            padding-right: 0;
+            padding-left: 35px;
+        }
+
+        .steps-list li::before {
+            content: "✓";
+            position: absolute;
+            right: 0;
+            top: 2px;
+            background-color: var(--primary);
+            color: #0F101E;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+
+        [dir="ltr"] .steps-list li::before {
+            right: auto;
+            left: 0;
+        }
+
+        .warning-box {
+            background-color: rgba(255, 71, 87, 0.1);
+            border: 1px solid var(--danger);
+            color: var(--danger);
+            padding: 15px;
+            border-radius: 12px;
+            margin-top: 20px;
+            font-size: 0.95rem;
+        }
+
+        .lang-switch {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+
+        .lang-btn {
+            background: none;
+            border: 2px solid var(--primary);
+            color: var(--text-main);
+            padding: 8px 24px;
+            cursor: pointer;
+            font-family: inherit;
+            font-weight: 700;
+            transition: all 0.3s ease;
+        }
+
+        .lang-btn:first-child {
+            border-radius: 0 20px 20px 0;
+            border-left: none;
+        }
+
+        .lang-btn:last-child {
+            border-radius: 20px 0 0 20px;
+        }
+
+        .lang-btn.active {
+            background-color: var(--primary);
+            color: #0F101E;
+        }
+        
+        .email-link {
+            color: var(--primary);
+            font-weight: bold;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <!-- أزرار تبديل اللغة -->
+        <div class="lang-switch">
+            <button class="lang-btn active" onclick="switchLang('ar')">العربية</button>
+            <button class="lang-btn" onclick="switchLang('en')">English</button>
+        </div>
+
+        <!-- المحتوى باللغة العربية -->
+        <div id="content-ar">
+            <h1>سياسة حذف بيانات المستخدم</h1>
+            <div class="subtitle">نمنحك التحكم الكامل في بياناتك وخصوصيتك</div>
+
+            <p>إذا كنت ترغب في حذف حسابك وكافة البيانات المرتبطة به نهائياً من تطبيقنا، يمكنك القيام بذلك بسهولة باتباع إحدى الطريقتين:</p>
+
+            <div class="method-card">
+                <h2>الطريقة الأولى: الحذف من داخل التطبيق <span class="badge">الأسرع والموصى بها</span></h2>
+                <p>يمكنك حذف حسابك فوراً من داخل التطبيق عبر اتباع الخطوات البسيطة التالية:</p>
+                <ul class="steps-list">
+                    <li>افتح التطبيق وتأكد من تسجيل الدخول إلى حسابك.</li>
+                    <li>اذهب إلى <strong>الإعدادات (Settings)</strong>.</li>
+                    <li>ادخل على قسم <strong>الخصوصية والأمان (Privacy & Security)</strong>.</li>
+                    <li>انزل إلى <strong>أسفل الشاشة</strong>، واضغط على خيار <strong>حذف الحساب نهائياً (Delete Account Permanently)</strong>.</li>
+                </ul>
+                <div class="warning-box">
+                    <strong>ملاحظة هامة:</strong> هذا الإجراء فوري ولا يمكن التراجع عنه. سيتم مسح كافة بيانات ملفك الشخصي، نقاطك، ومعلوماتك نهائياً من خوادمنا.
+                </div>
+            </div>
+
+            <div class="method-card">
+                <h2>الطريقة الثانية: طلب الحذف عبر البريد الإلكتروني</h2>
+                <p>إذا قمت بإلغاء تثبيت التطبيق أو لم تتمكن من الوصول إلى حسابك، يمكنك طلب حذف بياناتك عبر مراسلتنا:</p>
+                <ul class="steps-list">
+                    <li>أرسل بريداً إلكترونياً إلى: <a href="mailto:account@neizad.com" class="email-link">account@neizad.com</a></li>
+                    <li>اجعل عنوان الرسالة: <strong>"طلب حذف حساب"</strong>.</li>
+                    <li>يجب إرسال الرسالة من <strong>نفس عنوان البريد الإلكتروني</strong> المرتبط بحسابك للتحقق من هويتك.</li>
+                </ul>
+                <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 15px;">* سيتم معالجة طلبات الحذف اليدوية ومسح بياناتك بالكامل خلال 3-5 أيام عمل.</p>
+            </div>
+        </div>
+
+        <!-- المحتوى باللغة الإنجليزية -->
+        <div id="content-en" dir="ltr" style="display: none;">
+            <h1>User Data Deletion Policy</h1>
+            <div class="subtitle">We give you full control over your privacy and data</div>
+
+            <p>If you wish to permanently delete your account and all associated data from our app, you can do so easily by following one of the methods below:</p>
+
+            <div class="method-card">
+                <h2>Method 1: In-App Deletion <span class="badge">Recommended & Fastest</span></h2>
+                <p>You can instantly delete your account from within the app by following these simple steps:</p>
+                <ul class="steps-list">
+                    <li>Open the app and ensure you are logged in.</li>
+                    <li>Go to <strong>Settings</strong>.</li>
+                    <li>Navigate to the <strong>Privacy & Security</strong> section.</li>
+                    <li>Scroll to the <strong>bottom of the screen</strong> and tap on <strong>Delete Account Permanently</strong>.</li>
+                </ul>
+                <div class="warning-box">
+                    <strong>Important Note:</strong> This action is immediate and irreversible. All your profile data, points, and personal information will be permanently erased from our servers.
+                </div>
+            </div>
+
+            <div class="method-card">
+                <h2>Method 2: Request Deletion via Email</h2>
+                <p>If you have uninstalled the app or cannot access your account, you can request data deletion by contacting us:</p>
+                <ul class="steps-list">
+                    <li>Send an email to: <a href="mailto:account@neizad.com" class="email-link">account@neizad.com</a></li>
+                    <li>Use the subject line: <strong>"Account Deletion Request"</strong>.</li>
+                    <li>You must send the email from the <strong>exact email address</strong> associated with your account to verify your identity.</li>
+                </ul>
+                <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 15px;">* Manual deletion requests will be processed and all your data will be wiped within 3-5 business days.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- سكربت بسيط لتبديل اللغات -->
+    <script>
+        function switchLang(lang) {
+            const btns = document.querySelectorAll('.lang-btn');
+            const arContent = document.getElementById('content-ar');
+            const enContent = document.getElementById('content-en');
+
+            btns.forEach(btn => btn.classList.remove('active'));
+
+            if (lang === 'ar') {
+                btns[0].classList.add('active');
+                arContent.style.display = 'block';
+                enContent.style.display = 'none';
+                document.documentElement.lang = 'ar';
+                document.documentElement.dir = 'rtl';
+            } else {
+                btns[1].classList.add('active');
+                enContent.style.display = 'block';
+                arContent.style.display = 'none';
+                document.documentElement.lang = 'en';
+                document.documentElement.dir = 'ltr';
+            }
+        }
+    </script>
+</body>
+</html>
